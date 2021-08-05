@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import cssClasses from './BurgerIngredient.module.css';
 import PropTypes from 'prop-types';
-import BurgerBuilder from '../../../containers/BurgerBuilder/BurgerBuilder';
 
 
 class BurgerIngredient extends Component{
@@ -9,29 +8,29 @@ class BurgerIngredient extends Component{
         let ingredient = null;
         switch (this.props.type){
             case ('bread-bottom') :
-                ingredient = <div className="cssClasses.BreadBottom">BreadBottom</div>
+                ingredient = <div className={cssClasses.BreadBottom}></div>
                 break;
             case ('bread-top') :
                 ingredient = (
-                    <div className="cssClasses.BreadTop">
-                         <div className="cssClasses.Seeds1"></div>
-                         <div className="cssClasses.Seeds2"></div>
+                    <div className={cssClasses.BreadTop}>
+                         <div className={cssClasses.Seeds1}></div>
+                         <div className={cssClasses.Seeds2}></div>
                     </div>
                 );
                 break;       
                 case ('meat') :
                     ingredient = (
-                        <div className="cssClasses.Meat"></div>
+                        <div className={cssClasses.Meat}></div>
                     );
                     break;     
             case ('cheese') :
                 ingredient = (
-                    <div className="cssClasses.Cheese"></div>
+                    <div className={cssClasses.Cheese}></div>
                 );
                 break;     
             case ('salad') :
                 ingredient = (
-                    <div className="cssClasses.Salad"></div>
+                    <div className={cssClasses.Salad}></div>
                 );
                 break;       
             default: 
@@ -41,8 +40,8 @@ class BurgerIngredient extends Component{
     }
 }
 
-burgerIngredient.propType = {
+BurgerIngredient.propType = {
     type : PropTypes.string.isRequired
 };
 
-export default burgerIngredient;
+export default BurgerIngredient;
