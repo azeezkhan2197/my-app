@@ -2,7 +2,6 @@ import React from 'react';
 import cssClass from './BuildControl.module.css';
 
 const buildControl =(props)=>{
-    console.log(props.disabled)
     return(
         <div className={cssClass.BuildControl}>
             <div className={cssClass.Label}>{props.label}</div>
