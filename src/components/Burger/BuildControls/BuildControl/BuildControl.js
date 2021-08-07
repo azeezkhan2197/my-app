@@ -2,11 +2,17 @@ import React from 'react';
 import cssClass from './BuildControl.module.css';
 
 const buildControl =(props)=>{
+    console.log(props.disabled)
     return(
         <div className={cssClass.BuildControl}>
             <div className={cssClass.Label}>{props.label}</div>
-            <button className={cssClass.Less}>Less</button>
-            <button className={cssClass.More} onClick={props.added}>More</button>
+            <button
+                className={cssClass.Less} 
+                onClick={props.remove}
+                disabled={props.disabled}>Less</button>
+            <button 
+                className={cssClass.More} 
+                onClick={props.added}>More</button>
         </div>
     )
 }
