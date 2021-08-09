@@ -8,7 +8,6 @@ function App() {
   return (
     <div className={cssClass.App}>
      <Layout>
-       <p>Test</p>
        <BurgerBuilder/>
      </Layout>
     </div>
